@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+	--ember: #8c2f1b;
+	--copper: #b4672a;
+	--pine: #1f3a2e;
+	--walnut: #4a2f24;
+	--cream: #f1e7d6;
+	--gold: #c6a75e;
+	--smoke: #2a2a2a;
+
+	--font1: "monoton", "fascinate", cursive;
+	--font2: "montserrat", "raleway", sans-serif;
+	--decor_font: "lobsters 2", "pacifico", cursive;
+
+}
+
+body {
+	font-family: var(--font2);
+	display: grid;
+	place-items: center;
+	background-color: #f1e7d6;
+	background-image: url("https://www.transparenttextures.com/patterns/soft-kill.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.company {
+	font-family: var(--font1);
+	font-size: 2.5rem;
+	gap: 20px;
+	align-items: center;
+	color: var(--walnut);
+	padding-bottom: 0px;
+	justify-content: center;
+	margin-bottom: 0;
+	margin-top: 200px;
+}
+
+header {
+	background-image: url(images/swiss-valley.jpg);
+	display: grid;
+	width: auto;
+	height: 560px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	border: double 2px var(--copper);
+}
+
+header h1 {
+	font-family: var(--font1);
+	font-weight: bold;
+	margin: 0;
+	font-size: 3.5rem;
+	color: var(--pine);
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 20px;
+	align-items: center;
+	padding: 0px;
+	font-size: 1.2rem;
+	padding-bottom: 100px;
+}
+
+nav li {
+	display: inline;
+	font-family: var(--font2);
+	font-size: 22px;
+	color: var(--copper);
+}
+
+nav a {
+	text-align: center;
+	text-decoration: none;
+	color: var(--walnut);
+	padding: 5px 10px;
+}
+
+nav a:hover {
+	background-color: var(--copper);
+	color: var(--cream);
+	border: double 3px var(--gold);
+
+}
+
+nav a:focus {
+	background-color: var(--walnut);
+	color: var(--cream);
+	border: double 3px var(--gold);
+}
+
+section #relax {
+	padding: 20px;
+}
+
+#relax h2 {
+	display: flex;
+	justify-content: center;
+	font-family: var(--decor_font);
+	font-size: 2rem;
+	color: var(--ember);
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#relax p {
+	font-size: 1.2rem;
+	color: var(--smoke);
+	line-height: 1.5;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 20px;
+}	
+
+.main.content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	align-items: center;
+}
+
+section #content1 {
+	grid-column: 1;
+}
+
+#content1 img{
+	margin: 0 auto;
+}
+
+#content2 img {
+	margin: 0 auto;
+}
+
+#content1 p {
+	font-size: 1.2rem;
+	color: var(--smoke);
+	max-width: 500px;
+	margin: 15px auto;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+section #content2 {
+	grid-column: 2;
+}
+
+#content2 p {
+	font-size: 1.2rem;
+	color: var(--smoke);
+	max-width: 500px;
+	margin: 15px auto;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+section img {
+	display: flex;
+	justify-content: center;
+	border-radius: 3px;
+	border: double 2px var(--copper) 
+}
+
+h3 {
+	font-family: var(--decor_font);
+	display: flex;
+	justify-content: center;
+	color: var(--pine);
+	font-size: 2rem;
+	opacity: 70%;
+	margin: 8px;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: var(--gold);
+	color: var(--walnut);
+	font-size: 20px;
+	margin-top: 50px;
+}
+
+#contact_us h2 {
+	display: flex;
+	width: 350px;
+	align-items: center;
+	font-family: var(--decor_font);
+	font-size: 2rem;
+	color: var(--ember);
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#contact_us p {
+	font-size: 20px;
+	color: var(--walnut);
+	width: 350px;
+}
+
+#contact_us {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+div.controls {
+	margin-top: 40px;
+}
+
+#form_controls {
+	margin-top: 120px;
+	margin-left: 20px;
+}
+
+#form_controls label {
+	font-family: var(--font2);
+	font-size: 20px;
+	margin-top: 30px;
+	color: var(--walnut);
+	
+}
+
+label {
+	display: block;
+	flex-direction: column;
+	margin-bottom: 5px;
+}
+
+input[type=text], input[type=email], input[type=tel] {
+	width: 300px;
+	height: 35px;
+	padding: 10px;
+
+}
+
+input[type=radio] {
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+
+legend {
+	font-family: var(--font2);
+	font-size: 20px;
+	color: var(--walnut);
+}
+
+div.preferred {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: var(--walnut);
+}
+
+div.radio-group {
+	display: grid;
+	align-items: center;
+}
+
+input[type=submit] {
+	background-color: var(--ember);
+	font-family: var(--font2);
+	font-size: 20px;
+	color: var(--gold);
+	margin: 10px;
+	padding: 15px 100px;
+}
+
+input[type=submit]:focus {
+	background-color: var(--walnut);
+	color: var(--cream);
+	border: double 3px var(--gold);
+}
+
+input[type=submit]:hover {
+	background-color: var(--pine);
+	color: var(--cream);
+	border: double 3px var(--gold);
+}
+
+
